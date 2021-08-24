@@ -71,7 +71,6 @@ def add_record():
         print("")
         print("Document inserted")
     except:
-        print("")
         print("Error accessing the database.")
 
 def find_record():
@@ -81,8 +80,11 @@ def find_record():
         for k,v in doc.items():
             if k != "id":
                 print(k.capitalize() + ": " + v.capitalize())
-        
 
+
+def edit_record():
+    doc = get_record()
+    
 
 def main_loop():
     while True:
